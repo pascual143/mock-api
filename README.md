@@ -1,1 +1,1 @@
-# mock-api - FAKE API
+# mock-api - FAKE APIs
