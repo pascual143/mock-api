@@ -7,19 +7,11 @@ const app = express();
 const port = 3000;
 
 // Leer los datos desde el archivo JSON
-const familyGuyData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data/simpsonData.json')));
+const simpsonData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data/simpsonData.json')));
 
 // Rutas de la API
 app.get('/api/characters', (req, res) => {
   res.json(simpsonData.characters);
-});
-
-app.get('/api/episodes', (req, res) => {
-  res.json(simpsonData.episodes);
-});
-
-app.get('/api/quotes', (req, res) => {
-  res.json(simpsonData.quotes);
 });
 
 app.get('/api/characters/:id', (req, res) => {
